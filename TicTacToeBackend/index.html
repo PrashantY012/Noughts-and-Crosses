@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Tic Tac Toe</h1>
+            <p class="subtitle">Play against AI or another player</p>
+        </header>
+
+        <!-- Game Setup Form -->
+        <div id="gameSetup" class="game-setup">
+            <div class="setup-card">
+                <h2>Game Setup</h2>
+                <form id="setupForm">
+                    <div class="form-group">
+                        <label for="gridSize">Grid Size:</label>
+                        <select id="gridSize" name="gridSize" required>
+                            <option value="3">3x3 (Classic)</option>
+                            <option value="4">4x4</option>
+                            <option value="5">5x5</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="player1Name">Player 1 Name:</label>
+                        <input type="text" id="player1Name" name="player1Name" value="Player 1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="player2Name">Player 2 Name:</label>
+                        <input type="text" id="player2Name" name="player2Name" value="Player 2" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="player2Type">Player 2 Type:</label>
+                        <select id="player2Type" name="player2Type" required>
+                            <option value="HUMAN">Human Player</option>
+                            <option value="AI">AI Player</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Start Game</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Game Interface -->
+        <div id="gameInterface" class="game-interface" style="display: none;">
+            <!-- Game Info -->
+            <div class="game-info">
+                <div class="player-info">
+                    <div class="player" id="player1Info">
+                        <span class="player-name">Player 1</span>
+                        <span class="player-symbol">X</span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="player" id="player2Info">
+                        <span class="player-name">Player 2</span>
+                        <span class="player-symbol">O</span>
+                    </div>
+                </div>
+                <div class="current-player" id="currentPlayerInfo">
+                    Current Turn: <span id="currentPlayerName">Player 1</span>
+                </div>
+                <div class="game-status" id="gameStatus">Game in progress</div>
+            </div>
+
+            <!-- Game Board -->
+            <div class="game-board-container">
+                <div id="gameBoard" class="game-board"></div>
+            </div>
+
+            <!-- Game Controls -->
+            <div class="game-controls">
+                <button id="newGameBtn" class="btn btn-secondary">New Game</button>
+                <button id="resetGameBtn" class="btn btn-danger">Reset</button>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message" style="display: none;">
+            <div class="error-content">
+                <span class="error-icon">⚠️</span>
+                <span id="errorText">An error occurred</span>
+                <button id="closeError" class="btn-close">×</button>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message" style="display: none;">
+            <div class="success-content">
+                <span class="success-icon">🎉</span>
+                <span id="successText">Success!</span>
+                <button id="closeSuccess" class="btn-close">×</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
