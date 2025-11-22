@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <form action="" id="ticTacToeForm">
+        <label for="player1Name" >Enter Player 1 Name </label>
+        <input type="text" id="player1Name" name="player1Name"><br>
+        <label for="player2Name">Enter Player 2 Name </label>
+        <input type="text" id="player2Name" name="player2Name"><br>
+        <label for="player2Type">Choose player 2 type </label>
+        <select id="player2Type" name="player2Type">
+            <option value="HUMAN">Human</option>
+            <option value="AI">AI</option>
+        </select>
+        <label for="gridSize">Choose grid size</label>
+        <select id="gridSize" name="gridSize">
+            <option value="3">3x3</option>
+            <option value="4">4x4</option>
+            <option value="5">5x5</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+        
+    </form>
+    <script src="self.js" type="module"></script>
+</body>
+</html>

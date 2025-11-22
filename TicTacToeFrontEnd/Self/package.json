@@ -1,0 +1,17 @@
+{
+  "name": "self",
+  "version": "1.0.0",
+  "main": "configDev.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:local": "node copyConfig.js local",
+    "build:prod": "node copyConfig.js prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+

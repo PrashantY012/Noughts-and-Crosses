@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">This is the container
+        <div id="box1">this is box 1 
+            <span>This is para</span>
+        </div>
+    </div>
+    <script >
+        console.log("Test")
+        console.log(document.getElementById("container").textContent );
+        document.getElementById("container").innerHTML = "<div>Custom Div</div>"
+    </script>
+</body> 
+</html>
